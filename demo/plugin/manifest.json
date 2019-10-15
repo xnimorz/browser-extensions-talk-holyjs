@@ -1,0 +1,24 @@
+{
+  "manifest_version": 2,
+  "name": "HolyJs Example",
+  "version": "4.2",
+  "icons": {
+    "128": "./icons/active128.png",
+    "48": "./icons/active48.png",
+    "32": "./icons/active32.png"
+  },
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "permissions": ["tabs", "activeTab", "<all_urls>"],
+  "browser_action": {
+    "default_icon": { "128": "./icons/active128.png", "48": "./icons/active48.png", "32": "./icons/active32.png" },
+    "default_popup": "./popup/index.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "css": ["style.css"]
+    }
+  ]
+}

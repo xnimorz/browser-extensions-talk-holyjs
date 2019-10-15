@@ -1,0 +1,10 @@
+{
+  "title": "Импорт кандидатов на talantix.ru",
+  "name": "ats-plugin",
+  "repository": "hhru/tms",
+  "version": "1.4",
+  "private": true,
+  "description": "Браузерный плагин для импорта кандидатов с SuperJob в talantix.ru",
+  "main": "./mozilla.js",
+  "author": "HeadHunter https://talantix.ru"
+}

@@ -1,0 +1,15 @@
+{
+  "manifest_version": 2,
+  "name": "PLUGIN_DESTROYER",
+  "version": "4.2",
+  "icons": {
+    "128": "./icons/icon128.png"
+  },
+  "permissions": ["tabs", "activeTab", "<all_urls>"],
+  "content_scripts": [
+    {
+      "matches": ["http://*/*"],
+      "js": ["entry.js"]
+    }
+  ]
+}

@@ -30,8 +30,10 @@ const mo = new MutationObserver(function callback(mutationsList) {
       ) {
         if (addedNode.querySelector(`.${CONFIG.message}`)) {
           const messageBody = addedNode.querySelector(`.${CONFIG.messageBody}`);
-          messageBody.innerHTML =
-            STICKERS[messageBody.innerText.match(/\?(.+)/)[1]].html;
+          const match = messageBody.innerText.match(/\?(.+)/);
+          if (match && match[1]) {
+            messageBody.innerHTML = STICKERS[match[1]].html;
+          }
         }
       }
       if (addedNode.nodeType !== Node.ELEMENT_NODE) return false;

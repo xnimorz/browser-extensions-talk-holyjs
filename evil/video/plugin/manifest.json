@@ -1,6 +1,6 @@
 {
   "manifest_version": 2,
-  "name": "HolyJs audio",
+  "name": "HolyJs VIDEO",
   "version": "4.2",
   "icons": {
     "128": "./icons/icon128.png",
@@ -21,11 +21,7 @@
   },
   "content_scripts": [
     {
-      "matches": [
-        "https://vk.com/*",
-        "https://web.telegram.org/*",
-        "https://*/*"
-      ],
+      "matches": ["https://*/*"],
       "js": ["entry.js"]
     }
   ]

@@ -14,10 +14,13 @@ const blackList = [
 const sendAnalytics = ({ element, extension }) => {
   console.log('{PAGE EXTENSION DETECTED — START}');
   console.log(`Extension: ${extension.extName}`);
-  //debugger;
   console.log(`Element: ${element.outerHTML}`);
+  // Способ удаления, если используем черные списки
   if (extension.remove) {
     extension.remove(element);
+  } else {
+    // Способ удаления, если удаляем все, чего нет в белом списке
+    element.parentNode.removeChild(element);
   }
   console.log('{PAGE EXTENSION DETECTED — END}');
 };

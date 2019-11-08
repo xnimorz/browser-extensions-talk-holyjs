@@ -21,8 +21,10 @@ const sendAnalytics = ({ element, extension }) => {
   if (extension.remove) {
     extension.remove(element);
   } else {
-    // Способ удаления, если удаляем все, чего нет в белом списке
-    element.parentNode.removeChild(element);
+    try {
+      // Способ удаления, если удаляем все, чего нет в белом списке
+      element.parentNode.removeChild(element);
+    } catch (ignore) {}
   }
   console.log('{PAGE EXTENSION DETECTED — END}');
 };

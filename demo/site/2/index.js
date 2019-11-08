@@ -6,7 +6,9 @@ const blackList = [
     className: 'holy-example',
     extName: 'holyjs',
     remove: (element) => {
-      element.parentNode.removeChild(element);
+      try {
+        element.parentNode.removeChild(element);
+      } catch (ignore) {}
     },
   },
 ];
